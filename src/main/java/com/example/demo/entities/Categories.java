@@ -1,7 +1,7 @@
 package com.example.demo.entities;
 
 import java.util.List;
-import java.util.Objects;
+
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -23,81 +23,45 @@ public class Categories {
 	private String name;
 	
 	@ManyToOne
-	@JoinColumn(name = "objets_id")
-	private Objects objets;
-    
-	
-	
+	@JoinColumn(name = "objets_id" )
+	private Objets objets;
+
 	public Categories() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	
-
-
-
-
-
-	public Categories(Long id, String name, Objects objets) {
+	public Categories(Long id, String name, Objets objets) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.objets = objets;
 	}
 
-
-
-
-
-
-
-
 	public Long getId() {
 		return id;
 	}
-
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-
 	public String getName() {
 		return name;
 	}
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
-
-
-
-
-
-
-	public Objects getObjets() {
+	public Objets getObjets() {
 		return objets;
 	}
 
-
-
-
-
-
-
-
-	public void setObjets(Objects objets) {
+	public void setObjets(Objets objets) {
 		this.objets = objets;
 	}
-	
-	
-	
-	
+    
 	
 	
 	
